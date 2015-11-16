@@ -19,6 +19,10 @@ endif(NOT CMAKE_CONFIGURATION_TYPES AND NOT CMAKE_BUILD_TYPE)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -fPIC -Wall")
 set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 
+if (POLICY CMP0042)
+  cmake_policy (SET CMP0042 NEW)
+endif ()
+
 # Print out compiler commands
 # set(CMAKE_VERBOSE_MAKEFILE ON)
 
